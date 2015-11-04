@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/**
+ * InteGento Styles : Default CSS for Magento
+ *
+ * @version 0.1
+ * @license MIT
+ * @author Darklg <darklg.blog@gmail.com> <@darklg>
+ * @url http://github.com/Darklg/InteGento
+ * @dependencies : http://github.com/Darklg/SassCSSCommon
+ */
+
+/* ----------------------------------------------------------
+  Core elements
+---------------------------------------------------------- */
+
+@import "components/common";
+@import "components/forms";
+@import "components/messages";
+@import "components/breadcrumbs";
+
+/* Filters
+-------------------------- */
+
+@import "components/pager";
+
+/* Products
+-------------------------- */
+
+@import "components/price-box";
+@import "components/item-options";

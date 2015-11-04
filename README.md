@@ -1,1 +1,3 @@
-# InteGentoMageForms
+# InteGentoStyles
+
+Default CSS for Magento

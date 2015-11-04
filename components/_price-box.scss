@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Price box
+---------------------------------------------------------- */
+
+.price-box *,
+.price-box {
+    font-size: 12px;
+}
+
+.price-box p {
+    display: inline;
+}
+
+.price-box .price-label {
+    display: none;
+}
+
+.price-box .old-price {
+    text-decoration: line-through;
+}

@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Breadcrumbs
+---------------------------------------------------------- */
+
+.breadcrumbs {
+    min-height: 30px;
+}
+
+.breadcrumbs li {
+    float: left;
+    line-height: 30px;
+}
+
+.breadcrumbs li + li:before {
+    content: '/';
+    margin: 0 5px;
+}
