@@ -155,8 +155,13 @@
 }
 
 .form-list .input-box select {
-    background: transparent no-repeat 98% 50%;
+    background: transparent no-repeat right 50%;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAQAAADvCgS4AAAAGklEQVR4AWNg+I8BcQGCyhAAXRlhpcQAQsoAMGIY6KADYAUAAAAASUVORK5CYII=);
+}
+
+.form-list.form-list .input-box select[multiple] {
+    height: auto;
+    background-position: right top 10px;
 }
 
 /* Messages

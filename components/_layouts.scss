@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Layouts
+---------------------------------------------------------- */
+
+/* 2 col Right
+-------------------------- */
+
+.col2-right-layout {
+    .col-main,
+    .col-right {
+        float: left;
+        width: 70%;
+    }
+
+    .col-right {
+        width: 30%;
+    }
+}
+
+/* 2 col Left
+-------------------------- */
+
+.col2-left-layout {
+    .col-main,
+    .col-left {
+        float: right;
+        width: 70%;
+    }
+
+    .col-left {
+        width: 30%;
+    }
+}
+
+/* 3 col
+-------------------------- */
+
+.col3-layout {
+    .col-wrapper,
+    .col-right {
+        float: left;
+    }
+
+    .col-main,
+    .col-left {
+        float: right;
+    }
+
+    .col-right {
+        width: 20%;
+    }
+
+    .col-wrapper {
+        width: 80%;
+    }
+
+    .col-left {
+        width: 25%;
+    }
+
+    .col-main {
+        width: 75%;
+    }
+}
+
+/* Clear
+-------------------------- */
+
+.col3-layout:after,
+.col2-left-layout:after,
+.col2-right-layout:after {
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
+    table-layout: fixed;
+}
+
+/* ----------------------------------------------------------
+  Responsive fix
+---------------------------------------------------------- */
+
+@media(max-width:$mobile-max) {
+    .col3-layout .col-main,
+    .col3-layout .col-wrapper,
+    .col3-layout .col-left,
+    .col3-layout .col-right,
+    .col2-left-layout .col-main,
+    .col2-left-layout .col-left,
+    .col2-right-layout .col-main,
+    .col2-right-layout .col-right {
+        float: none;
+        width: auto;
+    }
+}
