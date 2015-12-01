@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 /* ----------------------------------------------------------
   Messages
 ---------------------------------------------------------- */
@@ -45,6 +44,7 @@
     background-color: #FEE;
 }
 
+.messages .note-msg li,
 .messages .notice-msg li {
     border-color: #66C;
     color: #008;
