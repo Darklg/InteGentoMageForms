@@ -3,12 +3,15 @@
 /**
  * InteGento Styles : Default CSS for Magento
  *
- * @version 0.4
+ * @version 0.4.1
  * @license MIT
  * @author Darklg <darklg.blog@gmail.com> <@darklg>
  * @url http://github.com/Darklg/InteGento
  * @dependencies : http://github.com/Darklg/SassCSSCommon
  */
+
+$mobile-max: 700px !default;
+$mobile_only: "max-width:"+$mobile-max !default;
 
 /* ----------------------------------------------------------
   Core elements

@@ -34,7 +34,10 @@
 }
 
 .form-list .fields:after {
-    @extend .clearfix;
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
 }
 
 .form-list .wide,
