@@ -227,3 +227,37 @@
         width: 40%;
     }
 }
+
+/* ----------------------------------------------------------
+  Form input + ok
+---------------------------------------------------------- */
+
+.form-input-ok {
+    z-index: 1;
+    position: relative;
+    font-size: 10px;
+}
+
+.form-input-ok button,
+.form-input-ok input {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 3em;
+}
+
+.form-input-ok button {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3em;
+    padding: 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+.form-input-ok input {
+    width: 100%;
+    padding-right: 4em;
+    padding-left: 0.5em;
+}
