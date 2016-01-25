@@ -48,6 +48,7 @@
 
 .form-list .fields .field {
     float: left;
+    margin-bottom: 0;
     padding-left: 10px;
 }
 
@@ -183,16 +184,16 @@
 ---------------------------------------------------------- */
 
 @media(max-width:$mobile-max) {
-    .form-list > li,
-    .form-list .half-field,
-    .form-list .fields .field {
+    .form-list:not(.form-list--unresponsive) > li,
+    .form-list:not(.form-list--unresponsive) .half-field,
+    .form-list:not(.form-list--unresponsive) .fields .field {
         float: none;
         width: auto;
         padding-right: 0;
         padding-left: 0;
     }
 
-    .form-list .fields .field:first-child {
+    .form-list:not(.form-list--unresponsive) .fields .field:first-child {
         margin-bottom: 1em;
     }
 
