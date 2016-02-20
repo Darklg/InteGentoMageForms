@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* Examples
+-------------------------- */
+
+/* Action theme */
+
+input[name="integento-panel"][value="panel-1"]:checked ~ * label[for="integento-panel-1"],
+input[name="integento-panel"][value="panel-2"]:checked ~ * label[for="integento-panel-2"] {
+    color: #CCC;
+}
+
+/* Base theme */
+
+.integento-mobile-panels {
+    z-index: 10;
+    position: relative;
+    height: 100px;
+}
+
+.integento-mobile-panels--panel {
+    background-color: #E0E0E0;
+}
+
+.integento-mobile-panels--filter {
+    background-color: #F0F0F0;
+}

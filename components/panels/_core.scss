@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Panels
+---------------------------------------------------------- */
+
+.integento-mobile-panels--panel,
+.integento-mobile-panels--filter {
+    visibility: hidden;
+    z-index: 10;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.integento-mobile-panels--filter {
+    z-index: 9;
+    bottom: 0;
+}
+
+/* Radio items */
+
+input[name="integento-panel"] {
+    z-index: 1;
+    position: absolute;
+    top: -99px;
+    left: -99px;
+    opacity: 0.01;
+}
+
+/* Action display */
+
+.integento-panel--is-visible,
+input[name="integento-panel"]:not([value="no-panel"]):checked ~ * .integento-mobile-panels--filter,
+input[name="integento-panel"][value="panel-1"]:checked ~ * .panel-1,
+input[name="integento-panel"][value="panel-2"]:checked ~ * .panel-2 {
+    visibility: visible;
+    opacity: 0.99;
+}
