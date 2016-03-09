@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Essential grid
+---------------------------------------------------------- */
+
+.product-essential {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.product-essential .product-img-box,
+.product-essential .product-shop {
+    display: table-cell;
+    vertical-align: top;
+}
+
+.product-shop {
+    width: 45%;
+}
+
+@media($mobile_only) {
+    .product-essential,
+    .product-essential .product-img-box,
+    .product-essential .product-shop {
+        display: block;
+        width: auto;
+        padding: 0 0 10px;
+    }
+}
