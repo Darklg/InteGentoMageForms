@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Loader
+---------------------------------------------------------- */
+
+.onepagecheckout-index-index .block,
+.checkout-onepage-index .step {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    .please-wait {
+        @extend .absolute-cover !optional;
+        z-index: 10;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 5% 10px;
+        text-align: center;
+        opacity: 0.90;
+        background: #fff;
+    }
+
+    .please-wait img {
+        display: block;
+        margin: 0 auto;
+    }
+}

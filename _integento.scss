@@ -3,15 +3,28 @@
 /**
  * InteGento Styles : Default CSS for Magento
  *
- * @version 0.8.2
+ * @version 0.9
  * @license MIT
  * @author Darklg <darklg.blog@gmail.com> <@darklg>
  * @url http://github.com/Darklg/InteGento
  * @dependencies : http://github.com/Darklg/SassCSSCommon
  */
 
-$mobile-max: 700px !default;
+$font-size: 13px !default;
+$mobile-max: 767px !default;
+$tablet-min: 768px !default;
+$tablet-max: 1023px !default;
+$desktop-min: 1024px !default;
+$desktop-mid: 1299px !default;
+$desktop-max: 1599px !default;
+$large-min: 1600px !default;
+
 $mobile_only: "max-width:"+$mobile-max !default;
+$mobile_excluded: "min-width:"+$tablet-min !default;
+$desktop_excluded: "max-width:"+$tablet-max !default;
+$desktop_only: "min-width:"+$desktop-min !default;
+$large_excluded: "max-width:"+$desktop-max !default;
+$large_only: "min-width:"+$large-min !default;
 
 /* ----------------------------------------------------------
   Core elements
@@ -23,17 +36,18 @@ $mobile_only: "max-width:"+$mobile-max !default;
 @import "components/messages";
 @import "components/breadcrumbs";
 @import "components/layouts";
-@import "components/grid";
+@import "components/col2set";
+@import "components/loader";
 
 /* Content
 -------------------------- */
 
-@import "components/std";
+@import "components/page/cms/std";
 
 /* Filters
 -------------------------- */
 
-@import "components/pager";
+@import "components/page/html/pager";
 
 /* Panels
 -------------------------- */
@@ -44,12 +58,12 @@ $mobile_only: "max-width:"+$mobile-max !default;
 /* Products
 -------------------------- */
 
-@import "components/price-box";
-@import "components/products-grid";
-@import "components/item-options";
+@import "components/catalog/product/price-box";
+@import "components/catalog/product/list/grid";
 
 /* View
 -------------------------- */
 
-@import "components/product-essential";
-@import "components/product-medias";
+@import "components/catalog/product/view/essential";
+@import "components/catalog/product/view/item-options";
+@import "components/catalog/product/view/medias";
