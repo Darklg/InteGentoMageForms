@@ -7,14 +7,18 @@
 .form-list {
     z-index: 1;
     position: relative;
-    font-size: 13px;
+    font-size: $font-size;
 }
 
 .form-list .wide,
+.form-list .field,
 .form-list .fields,
 .form-list .half-field,
 .form-list > li {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     margin-bottom: 1em;
+    font: inherit;
 }
 
 .form-list .fields .fields:last-child {
@@ -24,46 +28,39 @@
 /* Grid
 -------------------------- */
 
-.form-list > li,
 .form-list .half-field,
-.form-list .fields .field {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
+.form-list .fields.fields--float .field {
     width: 50%;
     padding-right: 10px;
 }
 
-.form-list .fields:after {
-    content: '';
-    display: table;
-    clear: both;
-    width: 100%;
-}
+.form-list .fields.fields--float {
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+        width: 100%;
+    }
 
-.form-list .wide,
-.form-list .fields {
-    width: auto;
-    padding-right: 0;
-}
+    .field {
+        float: left;
+        margin-bottom: 0;
+        padding-left: 10px;
+    }
 
-.form-list .fields .field {
-    float: left;
-    margin-bottom: 0;
-    padding-left: 10px;
-}
+    .field:first-child {
+        padding-left: 0;
+    }
 
-.form-list .fields .field:first-child {
-    padding-left: 0;
-}
+    .field:first-child:last-child {
+        float: none;
+        padding-right: 0;
+        padding-left: 0;
+    }
 
-.form-list .fields .field:first-child:last-child {
-    float: none;
-    padding-right: 0;
-    padding-left: 0;
-}
-
-.form-list .fields .field + .field:last-child {
-    padding-right: 0;
+    .field + .field:last-child {
+        padding-right: 0;
+    }
 }
 
 /* Labels
@@ -91,63 +88,71 @@
 /* Fields
 -------------------------- */
 
-.form-list .input-box textarea,
-.form-list .input-box input[type=text],
-.form-list .input-box input[type=email],
-.form-list .input-box input[type=password] {
-    @extend .inputreset !optional;
+.form-list .input-box {
+    textarea,
+    input[type=text],
+    input[type=email],
+    input[type=password] {
+        @extend .inputreset !optional;
+        border-radius: 0;
+        font: inherit;
+    }
 }
 
 /* Dob */
 
 .customer-dob {
-    z-index: 1;
-    position: relative;
-    margin-right: -10px;
-}
+    & {
+        z-index: 1;
+        position: relative;
+        margin-right: -10px;
+    }
 
-.customer-dob label {
-    display: block;
-}
+    label {
+        display: block;
+    }
 
-.customer-dob > * {
-    display: inline-block;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    width: 15%;
-    padding-right: 10px;
-    vertical-align: middle;
-}
+    & > * {
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 15%;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
 
-.customer-dob .dob-year {
-    width: 20%;
+    .dob-year {
+        width: 20%;
+    }
 }
 
 /* Checkboxes */
 
-.form-list .control > input[type=checkbox] {
-    margin-right: 3px;
-}
+.form-list .control {
+    & > input[type=checkbox] {
+        margin-right: 3px;
+    }
 
-.form-list .control > input[type=checkbox],
-.form-list .control .input-box {
-    display: inline-block;
-    vertical-align: 0;
-}
+    & > input[type=checkbox],
+    .input-box {
+        display: inline-block;
+        vertical-align: 0;
+    }
 
-.form-list .control > label:first-child + .input-box:last-child {
-    display: block;
-}
+    & > label:first-child + .input-box:last-child {
+        display: block;
+    }
 
-.form-list .control [type=radio] {
-    margin-right: 3px;
-    margin-left: 6px;
-    vertical-align: 0;
-}
+    [type=radio] {
+        margin-right: 3px;
+        margin-left: 6px;
+        vertical-align: 0;
+    }
 
-.form-list .control label [type=radio] {
-    margin-right: 5px;
-    margin-left: 1px;
+    label [type=radio] {
+        margin-right: 5px;
+        margin-left: 1px;
+    }
 }
 
 /* Select */
@@ -156,9 +161,6 @@
     @extend .cssc-select !optional;
     border: 0;
     border-radius: 0;
-}
-
-.form-list .input-box select {
     background: transparent no-repeat right 50%;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAQAAADvCgS4AAAAGklEQVR4AWNg+I8BcQGCyhAAXRlhpcQAQsoAMGIY6KADYAUAAAAASUVORK5CYII=);
 }
@@ -234,31 +236,33 @@
 ---------------------------------------------------------- */
 
 .form-input-ok {
-    z-index: 1;
-    position: relative;
-    font-size: 10px;
-}
+    & {
+        z-index: 1;
+        position: relative;
+        font-size: 10px;
+    }
 
-.form-input-ok button,
-.form-input-ok input {
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    height: 3em;
-}
+    button,
+    input {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 3em;
+    }
 
-.form-input-ok button {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3em;
-    padding: 0;
-    border: 0;
-    text-transform: uppercase;
-}
+    button {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 3em;
+        padding: 0;
+        border: 0;
+        text-transform: uppercase;
+    }
 
-.form-input-ok input {
-    width: 100%;
-    padding-right: 4em;
-    padding-left: 0.5em;
+    input {
+        width: 100%;
+        padding-right: 4em;
+        padding-left: 0.5em;
+    }
 }
