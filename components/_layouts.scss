@@ -34,6 +34,16 @@
     }
 }
 
+/* 2 col left - natural
+-------------------------- */
+
+.col2-left-layout--natural {
+    .col-main,
+    .col-left {
+        float: left;
+    }
+}
+
 /* 3 col
 -------------------------- */
 
