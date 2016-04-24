@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Form input + ok
+---------------------------------------------------------- */
+
+.form-input-ok {
+    & {
+        z-index: 1;
+        position: relative;
+        font-size: 10px;
+    }
+
+    button,
+    .input-text,
+    input[type=search],
+    input[type=text] {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        height: 3em;
+    }
+
+    button {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        border: 0;
+        text-transform: uppercase;
+        background: none;
+    }
+
+    .input-text,
+    input[type=search],
+    input[type=text] {
+        width: 100%;
+        padding-right: 4em;
+        padding-left: 0.5em;
+    }
+}

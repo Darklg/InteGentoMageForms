@@ -3,7 +3,7 @@
 /**
  * InteGento Styles : Default CSS for Magento
  *
- * @version 0.9.3
+ * @version 0.10
  * @license MIT
  * @author Darklg <darklg.blog@gmail.com> <@darklg>
  * @url http://github.com/Darklg/InteGento
@@ -31,12 +31,15 @@ $large_only: "min-width:"+$large-min !default;
 ---------------------------------------------------------- */
 
 @import "components/common";
-@import "components/forms";
+@import "components/forms/core";
+@import "components/forms/input-ok";
+@import "components/forms/theme";
 @import "components/buttons";
 @import "components/messages";
 @import "components/breadcrumbs";
 @import "components/layouts";
 @import "components/col2set";
+@import "components/tables";
 @import "components/loader";
 
 /* Content

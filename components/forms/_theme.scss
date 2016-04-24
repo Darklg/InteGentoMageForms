@@ -1,0 +1,109 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Forms
+---------------------------------------------------------- */
+
+/* Fields
+-------------------------- */
+
+.form-list > li,
+.form-list .fields .field {
+    float: none;
+    width: auto;
+    padding-right: 0;
+    padding-left: 0;
+}
+
+.form-list .field,
+.form-list .fields .field {
+    margin-bottom: 1em;
+}
+
+.form-list .field,
+.form-list .fields .field:last-child {
+    margin-bottom: 0;
+}
+
+.form-list label {
+    display: block;
+    padding: 1em 0;
+    text-transform: uppercase;
+    font-size: 13px;
+    font-weight: bold;
+    line-height: 1;
+    color: $color-main;
+}
+
+.form-list .control label {
+    display: inline-block;
+    margin-left: 5px;
+    padding: 0;
+    max-width: 90%;
+    vertical-align: -2px;
+}
+
+.form-list .input-box.input-box select,
+.form-list .input-box textarea,
+.form-list .input-box input[type=text],
+.form-list .input-box input[type=email],
+.form-list .input-box input[type=password] {
+    height: 2.5em;
+    padding: 0 1em;
+    border: 1px solid #93989c;
+    border-radius: 0;
+    font-family: $font-main;
+    font-size: $font-size;
+    line-height: 2.5;
+}
+
+.form-list .input-box textarea {
+    height: 6em;
+    padding: 1em;
+    line-height: 1.5;
+}
+
+.form-list .input-box.input-box select {
+    @extend .cssc-select;
+    padding-right: 3em;
+    background: transparent no-repeat right 50%;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAQAAADvCgS4AAAAGklEQVR4AWNg+I8BcQGCyhAAXRlhpcQAQsoAMGIY6KADYAUAAAAASUVORK5CYII=);
+}
+
+.form-list .field .input-box.input-box select {
+    border: 1px solid #93989c;
+}
+
+@media($desktop_only) {
+    .form-list.form-list--float > li:not(.fields) ,
+    .form-list.form-list--float .fields .field,
+    .form-list.form-list--float .field {
+        z-index: 1;
+        position: relative;
+        padding-left: 160px;
+    }
+
+    .form-list.form-list--float :not(.control) label {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 155px;
+    }
+}
+
+/* ----------------------------------------------------------
+  Input ok : Coupon / Search / Newsletter
+---------------------------------------------------------- */
+
+#search_mini_form label,
+#newsletter-validate-detail .form-subscribe-header,
+#discount-coupon-form label {
+    display: none;
+}
+
+#search_mini_form .form-search,
+#newsletter-validate-detail .block-content,
+#discount-coupon-form .discount-form {
+    @extend .form-input-ok;
+}
