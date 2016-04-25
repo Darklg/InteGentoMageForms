@@ -11,3 +11,40 @@
 .buttons-set {
     margin: 1em 0 2em;
 }
+
+/* ----------------------------------------------------------
+  Buttons set double
+---------------------------------------------------------- */
+
+.buttons-set--double {
+    & {
+        clear: both;
+    }
+
+    [class^="button"] + [class^="button"] {
+        float: right;
+    }
+}
+
+/* Reverse & full size on mobile */
+
+@media($mobile_only) {
+    .buttons-set--double {
+        display: flex;
+        flex-direction: column-reverse;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+    }
+
+    .buttons-set--double button[class^="button"] {
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: $mobile-padding;
+        padding-right: 0;
+        padding-left: 0;
+        max-width: 500px;
+    }
+}

@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Reset skin socolissimo
+---------------------------------------------------------- */
+
+.socolissimo-popup-inner {
+    * {
+        font-family: $font-main;
+    }
+
+    .socolissimo-address input,
+    .socolissimo-address select,
+    .socolissimo-actions button span,
+    .socolissimo-header,
+    .socolissimo-header h1 {
+        color: inherit;
+        background: transparent;
+    }
+
+    .socolissimo-header h1 {
+        font: inherit;
+    }
+}
+
+.socolissimo-popup-inner {
+    .socolissimo-address {
+        float: none;
+        width: auto;
+        padding: 0;
+        border: 0;
+        background: transparent;
+    }
+
+    .socolissimo-address:after {
+        content: '';
+        display: table;
+        clear: both;
+        width: 100%;
+        table-layout: fixed;
+    }
+}
+
+/* ----------------------------------------------------------
+  Link socolissimo skin to the current theme
+---------------------------------------------------------- */
+
+/* Buttons
+-------------------------- */
+
+.socolissimo-popup-inner .socolissimo-content {
+    button {
+        @extend .button;
+    }
+
+    .socolissimo-previous {
+        @extend .button--border!optional;
+    }
+}
+
+@media only screen and (max-width:920px) {
+    .socolissimo-popup-inner .socolissimo-actions {
+        clear: both;
+        position: relative;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        padding: 20px 0;
+        overflow: hidden;
+    }
+}
+
+/* Address selector
+-------------------------- */
+
+.socolissimo-popup-inner .socolissimo-address {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    p {
+        display: inline-block;
+        float: none;
+        margin: 0 10px 0 0;
+        vertical-align: top;
+    }
+
+    p label {
+        @extend %project--label;
+        display: block;
+        width: auto;
+    }
+
+    p input[type=text] {
+        @extend .inputreset;
+        @extend %project--field;
+    }
+
+    p select {
+        @extend %project--select;
+        margin: 0;
+    }
+
+    .socolissimo-actions {
+        z-index: 1;
+        float: none;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: auto;
+    }
+}
+
+@media only screen and (max-width:920px) {
+    .socolissimo-popup-inner .socolissimo-address {
+        margin-bottom: 20px;
+    }
+
+    .socolissimo-popup-inner .socolissimo-address p {
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .socolissimo-popup-inner .socolissimo-address .socolissimo-actions {
+        position: relative;
+    }
+}
