@@ -9,8 +9,15 @@
         font-family: $font-main;
     }
 
+    &,
+    .socolissimo-load,
+    .socolissimo-message,
     .socolissimo-address input,
     .socolissimo-address select,
+    .socolissimo-previous,
+    .socolissimo-next,
+    .socolissimo-shipping input,
+    .socolissimo-shipping select,
     .socolissimo-actions button span,
     .socolissimo-header,
     .socolissimo-header h1 {
@@ -20,6 +27,10 @@
 
     .socolissimo-header h1 {
         font: inherit;
+    }
+
+    .socolissimo-message {
+        z-index: 2;
     }
 }
 
@@ -48,18 +59,24 @@
 /* Buttons
 -------------------------- */
 
-.socolissimo-popup-inner .socolissimo-content {
-    button {
+.socolissimo-popup-inner {
+    .socolissimo-message button,
+    .socolissimo-content button {
         @extend .button;
     }
 
-    .socolissimo-previous {
+    .socolissimo-message .socolissimo-previous,
+    .socolissimo-content .socolissimo-previous {
         @extend .button--border!optional;
     }
 }
 
-@media only screen and (max-width:920px) {
-    .socolissimo-popup-inner .socolissimo-actions {
+.socolissimo-popup-inner .socolissimo-message button {
+    max-width: 50%;
+}
+
+.socolissimo-popup-inner .socolissimo-actions {
+    & {
         clear: both;
         position: relative;
         top: 0;
@@ -67,8 +84,42 @@
         bottom: 0;
         left: 0;
         margin: auto;
-        padding: 20px 0;
+        padding: 20px 0 10px;
         overflow: hidden;
+    }
+
+    button span {
+        padding: 0;
+        line-height: inherit;
+    }
+}
+
+/* Popin coordinates
+-------------------------- */
+
+.socolissimo-popup-inner .socolissimo-shipping {
+    li {
+        z-index: 1;
+        clear: both;
+        position: relative;
+    }
+
+    li:not(.socolissimo-actions) {
+        padding-left: 110px;
+    }
+
+    label {
+        @extend %project--label;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+    }
+
+    input[type=text] {
+        @extend .inputreset;
+        @extend %project--field;
     }
 }
 
@@ -104,6 +155,7 @@
         margin: 0;
     }
 
+    .socolissimo-actions button,
     .socolissimo-actions {
         z-index: 1;
         float: none;
@@ -111,6 +163,7 @@
         right: 0;
         bottom: 0;
         left: auto;
+        overflow: visible;
     }
 }
 
@@ -125,7 +178,34 @@
         margin-bottom: 20px;
     }
 
+    .socolissimo-popup-inner .socolissimo-address .socolissimo-actions button,
     .socolissimo-popup-inner .socolissimo-address .socolissimo-actions {
         position: relative;
     }
+}
+
+/* Base theme
+-------------------------- */
+
+.socolissimo-popup-inner {
+    .socolissimo-message,
+    .socolissimo-load {
+        background-color: #fff;
+    }
+}
+
+/* Fixed popin
+-------------------------- */
+
+.socolissimo-popup-inner.socolissimo-popup-inner {
+    z-index: 10001;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto!important;
+    max-height: 95%;
+    max-width: 95%;
+    overflow: auto;
 }
