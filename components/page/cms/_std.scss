@@ -34,20 +34,7 @@
 -------------------------- */
 
 .std table {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
-}
-
-.std table,
-.std th,
-.std td {
-    border: 1px solid #CCC;
-}
-
-.std th,
-.std td {
-    padding: 0.5em;
+    @extend .data-table;
 }
 
 /* Links

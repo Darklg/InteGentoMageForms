@@ -4,11 +4,15 @@
   Form input + ok
 ---------------------------------------------------------- */
 
-.form-input-ok {
+%form-input-ok {
     & {
         z-index: 1;
         position: relative;
         font-size: 10px;
+    }
+
+    label {
+        @extend .no-display !optional;
     }
 
     button,

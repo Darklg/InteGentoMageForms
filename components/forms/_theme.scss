@@ -96,14 +96,8 @@
   Input ok : Coupon / Search / Newsletter
 ---------------------------------------------------------- */
 
-#search_mini_form label,
-#newsletter-validate-detail .form-subscribe-header,
-#discount-coupon-form label {
-    display: none;
-}
-
 #search_mini_form .form-search,
 #newsletter-validate-detail .block-content,
 #discount-coupon-form .discount-form {
-    @extend .form-input-ok;
+    @extend %form-input-ok;
 }

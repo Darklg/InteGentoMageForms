@@ -109,7 +109,7 @@
     }
 
     label {
-        @extend %project--label;
+        @extend %project--label !optional;
         z-index: 1;
         position: absolute;
         top: 0;
@@ -119,7 +119,7 @@
 
     input[type=text] {
         @extend .inputreset;
-        @extend %project--field;
+        @extend %project--field !optional;
     }
 }
 
@@ -140,18 +140,18 @@
     }
 
     p label {
-        @extend %project--label;
+        @extend %project--label !optional;
         display: block;
         width: auto;
     }
 
     p input[type=text] {
         @extend .inputreset;
-        @extend %project--field;
+        @extend %project--field !optional;
     }
 
     p select {
-        @extend %project--select;
+        @extend %project--select !optional;
         margin: 0;
     }
 
