@@ -52,6 +52,18 @@
     }
 }
 
+@media only screen and (max-width:920px) {
+    .socolissimo-popup-inner.socolissimo-popup-inner {
+        min-width: 1px;
+    }
+
+    .socolissimo-popup-inner .socolissimo-list ul {
+        height: 200px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+}
+
 /* ----------------------------------------------------------
   Link socolissimo skin to the current theme
 ---------------------------------------------------------- */
@@ -91,6 +103,18 @@
     button span {
         padding: 0;
         line-height: inherit;
+    }
+}
+
+@media only screen and (max-width:920px) {
+    .socolissimo-popup-inner.socolissimo-popup-inner {
+        min-width: 1px;
+    }
+
+    .socolissimo-popup-inner .socolissimo-list ul {
+        height: 200px;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
     }
 }
 
@@ -181,6 +205,20 @@
     .socolissimo-popup-inner .socolissimo-address .socolissimo-actions button,
     .socolissimo-popup-inner .socolissimo-address .socolissimo-actions {
         position: relative;
+    }
+}
+
+/* Fix map
+-------------------------- */
+
+@media(min-width:921px) {
+    .socolissimo-popup-inner .socolissimo-list ul {
+        width: 42%;
+        border-right: 0;
+    }
+
+    .socolissimo-popup-inner .socolissimo-list .socolissimo-map {
+        width: 58%;
     }
 }
 

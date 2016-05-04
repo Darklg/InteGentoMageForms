@@ -6,6 +6,10 @@
 
 .std {
     font-size: 13px;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    hyphens: auto;
+    word-wrap: break-word;
 }
 
 /* Text

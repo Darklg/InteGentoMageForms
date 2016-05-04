@@ -4,13 +4,15 @@
   Price box
 ---------------------------------------------------------- */
 
-.price-box *,
-.price-box {
-    font-size: 12px;
+.price-box,
+.price-box * {
+    font-size: inherit;
 }
 
 .price-box p {
-    display: inline;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
 }
 
 .price-box .price-label {
