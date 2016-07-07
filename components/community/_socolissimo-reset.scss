@@ -74,7 +74,7 @@
 .socolissimo-popup-inner {
     .socolissimo-message button,
     .socolissimo-content button {
-        @extend .button;
+        @extend .button !optional;
     }
 
     .socolissimo-message .socolissimo-previous,
@@ -142,7 +142,7 @@
     }
 
     input[type=text] {
-        @extend .inputreset;
+        @extend .inputreset !optional;
         @extend %project--field !optional;
     }
 }
@@ -170,7 +170,7 @@
     }
 
     p input[type=text] {
-        @extend .inputreset;
+        @extend .inputreset !optional;
         @extend %project--field !optional;
     }
 

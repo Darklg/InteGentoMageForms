@@ -64,7 +64,7 @@
 }
 
 .form-list .input-box.input-box select {
-    @extend .cssc-select;
+    @extend .cssc-select !optional;
     padding-right: 3em;
     background: transparent no-repeat right 50%;
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAFCAQAAADvCgS4AAAAGklEQVR4AWNg+I8BcQGCyhAAXRlhpcQAQsoAMGIY6KADYAUAAAAASUVORK5CYII=);
@@ -99,5 +99,5 @@
 #search_mini_form .form-search,
 #newsletter-validate-detail .block-content,
 #discount-coupon-form .discount-form {
-    @extend %form-input-ok;
+    @extend %form-input-ok !optional;
 }
