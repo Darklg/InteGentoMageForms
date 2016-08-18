@@ -101,7 +101,7 @@
     .col2-left-layout .col-left,
     .col2-right-layout .col-main,
     .col2-right-layout .col-right {
-        float: none;
-        width: auto;
+        float: none!important;
+        width: auto!important;
     }
 }
