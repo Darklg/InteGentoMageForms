@@ -1,0 +1,95 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Amshopby - left
+---------------------------------------------------------- */
+
+/* Reset
+-------------------------- */
+
+.amshopby-filters-left > .block-content > .block-subtitle {
+    display: none;
+}
+
+div.block-layered-nav.amshopby-collapse-enabled dl {
+    dt,
+    dt.amshopby-collapsed {
+        padding-left: 0;
+        background: transparent;
+    }
+}
+
+/* Currently
+-------------------------- */
+
+.block-layered-nav .currently {
+    .btn-remove {
+        display: inline-block;
+        z-index: 1;
+        float: right;
+        position: relative;
+        width: 1em;
+        overflow: hidden;
+        text-indent: -999px;
+        vertical-align: top;
+    }
+
+    .btn-remove:after {
+        content: '×';
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        text-indent: 0;
+    }
+}
+
+/* Filters list
+-------------------------- */
+
+#narrow-by-list {
+    dt {
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    dt:after {
+        content: '-';
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        height: 1em;
+        margin: auto;
+        line-height: 1;
+    }
+
+    dt.amshopby-collapsed:after {
+        content: '+';
+    }
+
+    dd li {
+        margin-bottom: 0.4em;
+        font-size: 14px;
+        font-weight: 100;
+        line-height: 1.2;
+        letter-spacing: 0.05em;
+    }
+
+    a.amshopby-attr-selected,
+    a.amshopby-attr,
+    a.amshopby-attr:hover {
+        padding: 0;
+        font-weight: normal;
+        background: transparent;
+    }
+
+    a.amshopby-attr-selected {
+        font-weight: bold;
+    }
+}
