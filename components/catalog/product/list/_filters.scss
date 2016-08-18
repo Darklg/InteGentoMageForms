@@ -57,7 +57,7 @@ div.block-layered-nav.amshopby-collapse-enabled dl {
         user-select: none;
     }
 
-    dt:after {
+    .amshopby-collapse-enabled & dt:after {
         content: '-';
         z-index: 1;
         position: absolute;
@@ -69,7 +69,7 @@ div.block-layered-nav.amshopby-collapse-enabled dl {
         line-height: 1;
     }
 
-    dt.amshopby-collapsed:after {
+    .amshopby-collapse-enabled & dt.amshopby-collapsed:after {
         content: '+';
     }
 
