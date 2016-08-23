@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Quantity switch
+---------------------------------------------------------- */
+
+.integento-qty-switch {
+    & {
+        display: inline-block;
+        font-size: 0;
+        white-space: nowrap;
+        vertical-align: top;
+    }
+
+    & > * {
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 2.6em!important;
+        margin: 0!important;
+        padding: 0!important;
+        border: 0;
+        text-align: center;
+        font-size: 10px;
+        line-height: 2.5;
+        vertical-align: middle;
+    }
+
+    & > * + * {
+        border-left: inherit!important;
+    }
+
+    input[type="number"] {
+        @extend .inputreset !optional;
+    }
+
+    [data-increment],
+    [data-decrement] {
+        @extend .cssc-button !optional;
+    }
+}

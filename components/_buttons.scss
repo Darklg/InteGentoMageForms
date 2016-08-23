@@ -39,11 +39,21 @@
     }
 
     .buttons-set--double button[class^="button"] {
+        @extend %integento-button-mobile-full;
+    }
+}
+
+/* ----------------------------------------------------------
+  Full mobile button
+---------------------------------------------------------- */
+
+@media($mobile_only) {
+    %integento-button-mobile-full {
         display: block;
         float: none;
         width: 100%;
+        margin: 0 auto $mobile-padding;
         padding-right: 0;
-        margin-bottom: $mobile-padding;
         padding-left: 0;
         max-width: 500px;
     }

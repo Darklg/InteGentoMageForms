@@ -3,7 +3,7 @@
 /**
  * InteGento Styles : Default CSS for Magento
  *
- * @version 0.13.1
+ * @version 0.14
  * @license MIT
  * @author Darklg <darklg.blog@gmail.com> <@darklg>
  * @url http://github.com/Darklg/InteGento
@@ -72,6 +72,11 @@ $large_only: "min-width:"+$large-min !default;
 @import "components/catalog/product/view/essential";
 @import "components/catalog/product/view/item-options";
 @import "components/catalog/product/view/medias";
+
+/* Checkout
+-------------------------- */
+
+@import "components/checkout/qty";
 
 /* Community
 -------------------------- */
