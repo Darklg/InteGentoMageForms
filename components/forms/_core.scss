@@ -19,6 +19,7 @@
     box-sizing: border-box;
     margin-bottom: 1em;
     font: inherit;
+    list-style: none!important;
 }
 
 .form-list .fields .fields:last-child {
@@ -229,4 +230,3 @@
         width: 40%;
     }
 }
-

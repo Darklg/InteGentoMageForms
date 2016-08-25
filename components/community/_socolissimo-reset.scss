@@ -36,6 +36,12 @@
     .socolissimo-message {
         z-index: 2;
     }
+
+    .socolissimo-list p {
+        float: none;
+        width: auto;
+        font: inherit;
+    }
 }
 
 .socolissimo-popup-inner {
@@ -233,6 +239,10 @@
     .socolissimo-message,
     .socolissimo-load {
         background-color: #fff;
+    }
+
+    .socolissimo-load {
+        box-shadow: 0 0 15px rgba(#000,0.1);
     }
 }
 

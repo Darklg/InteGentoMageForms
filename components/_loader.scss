@@ -13,6 +13,7 @@
 
     .please-wait {
         @extend .absolute-cover !optional;
+        display: block;
         z-index: 10;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -26,4 +27,8 @@
         display: block;
         margin: 0 auto;
     }
+}
+
+#shipping-method-buttons-container {
+    opacity: 0.999!important;
 }
