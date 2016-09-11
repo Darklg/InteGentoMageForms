@@ -109,21 +109,43 @@
         margin-right: -10px;
     }
 
+    &:after {
+        content: '';
+        display: table;
+        clear: both;
+        width: 100%;
+        height: 1px;
+        table-layout: fixed;
+    }
+
     label {
         display: block;
     }
 
     & > * {
-        display: inline-block;
+        float: left;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
-        width: 15%;
         padding-right: 10px;
+        max-width: 30%;
         vertical-align: middle;
     }
 
     .dob-year {
-        width: 20%;
+        max-width: 40%;
+    }
+
+    input[type="text"] {
+        -moz-box-sizing: content-box!important;
+        box-sizing: content-box!important;
+        width: 2em;
+        max-width: 2em;
+        text-align: center;
+    }
+
+    .dob-year input[type="text"] {
+        width: 4em;
+        max-width: 4em;
     }
 }
 
@@ -198,14 +220,6 @@
     .form-list:not(.form-list--unresponsive) .fields .field:first-child {
         margin-bottom: 1em;
     }
-
-    .customer-dob > * {
-        width: 30%;
-    }
-
-    .customer-dob .dob-year {
-        width: 40%;
-    }
 }
 
 .thin-form {
@@ -220,13 +234,5 @@
 
     .form-list .fields .field:first-child {
         margin-bottom: 1em;
-    }
-
-    .customer-dob > * {
-        width: 30%;
-    }
-
-    .customer-dob .dob-year {
-        width: 40%;
     }
 }
