@@ -74,9 +74,16 @@
     user-select: none;
 }
 
-.form-list label.required em:first-child {
-    margin-right: 5px;
-    font-style: normal;
+/* Required */
+
+.form-list label.required {
+    em:first-child {
+        display: none;
+    }
+
+    &:after {
+        content: '*';
+    }
 }
 
 /* Control */
@@ -152,6 +159,11 @@
 /* Checkboxes */
 
 .form-list .control {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
     & > input[type=checkbox] {
         margin-right: 3px;
     }
