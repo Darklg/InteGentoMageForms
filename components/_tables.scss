@@ -32,3 +32,23 @@
         white-space: nowrap;
     }
 }
+
+/* ----------------------------------------------------------
+  Common tables
+---------------------------------------------------------- */
+
+#shopping-cart-totals-table {
+    td {
+        padding: 0.2em 0;
+        line-height: 1.2;
+    }
+
+    td + td {
+        text-align: right;
+    }
+
+    tfoot tr:last-child td {
+        padding-top: 0.2em;
+        font-size: 1.2em;
+    }
+}
