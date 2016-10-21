@@ -9,6 +9,21 @@
 }
 
 /* ----------------------------------------------------------
+  Reset
+---------------------------------------------------------- */
+
+.newsletter-manage-index,
+.wishlist-index-index,
+.sales-order-view,
+.customer-account-edit,
+.customer-address-form,
+.customer-address-index {
+    .col-main .back-link {
+        @extend .no-display !optional;
+    }
+}
+
+/* ----------------------------------------------------------
   Dashboard
 ---------------------------------------------------------- */
 
@@ -18,6 +33,15 @@
         @extend .desktop-grid-table;
         margin-bottom: $desktop-padding;
     }
+}
+
+/* ----------------------------------------------------------
+  Addresses
+---------------------------------------------------------- */
+
+.addresses-primary ol {
+    @extend .desktop-grid-table;
+    margin-bottom: $desktop-padding;
 }
 
 /* ----------------------------------------------------------
