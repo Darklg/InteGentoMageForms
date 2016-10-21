@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Layouts
+---------------------------------------------------------- */
+
+.customer-account-public .main-container {
+    & {
+        @extend .centered-container !optional;
+        min-width: 0;
+    }
+
+    & > * {
+        @extend %responsive-padding-tb !optional;
+        width: auto;
+    }
+}

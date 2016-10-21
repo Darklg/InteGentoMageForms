@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.customer-account .col-main {
+    padding-bottom: $desktop-padding;
+}
+
+/* ----------------------------------------------------------
+  Dashboard
+---------------------------------------------------------- */
+
+.dashboard .box-info {
+    .col2-set + .col2-set .box-content,
+    .box-head + .col2-set {
+        @extend .desktop-grid-table;
+        margin-bottom: $desktop-padding;
+    }
+}
+
+/* ----------------------------------------------------------
+  Sales
+---------------------------------------------------------- */
+
+.order-info-box {
+    @extend .desktop-grid-table;
+    margin-bottom: $desktop-padding;
+}
