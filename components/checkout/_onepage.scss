@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.checkout-onepage-index {
+    .main-container__wrapper {
+        @extend .centered-container;
+    }
+}
