@@ -15,3 +15,17 @@
         width: auto;
     }
 }
+
+.customer-account-logoutsuccess .main-container {
+    & .page-title {
+        padding: 0;
+    }
+
+    p {
+        padding-top: 0;
+    }
+
+    & > * {
+        text-align: center;
+    }
+}

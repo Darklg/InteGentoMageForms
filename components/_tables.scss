@@ -9,6 +9,10 @@
         margin-bottom: 2em;
     }
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+
     colgroup {
         display: none;
     }

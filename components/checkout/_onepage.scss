@@ -7,5 +7,6 @@
 .checkout-onepage-index {
     .main-container__wrapper {
         @extend .centered-container;
+        min-width: 0;
     }
 }
