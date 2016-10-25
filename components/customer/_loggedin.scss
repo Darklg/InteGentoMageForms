@@ -44,6 +44,28 @@
     margin-bottom: $desktop-padding;
 }
 
+.addresses-additional ol {
+    overflow: hidden;
+}
+
+.addresses-additional ol > li {
+    float: left;
+    width: 33.3%;
+}
+
+@media($desktop_excluded) {
+    .addresses-additional ol > li {
+        width: 50%;
+    }
+}
+
+@media($mobile_only) {
+    .addresses-additional ol > li {
+        float: none;
+        width: auto;
+    }
+}
+
 /* ----------------------------------------------------------
   Sales
 ---------------------------------------------------------- */
