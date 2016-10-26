@@ -1,3 +1,3 @@
 # InteGentoStyles
 
-Default CSS for Magento
+Default CSS for Magento Base Theme

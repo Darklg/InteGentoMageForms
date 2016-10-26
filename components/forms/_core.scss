@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_formlist_breakpoint: $mobile_only!default;
+
 /* ----------------------------------------------------------
   Mage forms
 ---------------------------------------------------------- */
@@ -170,7 +172,7 @@
   Responsive
 ---------------------------------------------------------- */
 
-@media(max-width:$mobile-max) {
+@media($integento_formlist_breakpoint) {
     .form-list:not(.form-list--unresponsive) > li,
     .form-list:not(.form-list--unresponsive) .half-field,
     .form-list:not(.form-list--unresponsive) .fields .field {

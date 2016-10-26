@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_layouts_breakpoint: $mobile_only!default;
+
 /* ----------------------------------------------------------
   Layouts
 ---------------------------------------------------------- */
@@ -92,7 +94,7 @@
   Responsive fix
 ---------------------------------------------------------- */
 
-@media(max-width:$mobile-max) {
+@media($integento_layouts_breakpoint) {
     .col3-layout .col-main,
     .col3-layout .col-wrapper,
     .col3-layout .col-left,

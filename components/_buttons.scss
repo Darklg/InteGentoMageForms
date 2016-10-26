@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_buttons_breakpoint: $mobile_only!default;
+
 /* ----------------------------------------------------------
   Buttons
 ---------------------------------------------------------- */
@@ -36,7 +38,7 @@
 
 /* Reverse & full size on mobile */
 
-@media($mobile_only) {
+@media($integento_buttons_breakpoint) {
     .buttons-set--double {
         display: flex;
         flex-direction: column-reverse;
@@ -55,7 +57,7 @@
   Full mobile button
 ---------------------------------------------------------- */
 
-@media($mobile_only) {
+@media($integento_buttons_breakpoint) {
     %integento-button-mobile-full {
         display: block;
         float: none;

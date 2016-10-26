@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_col2set_breakpoint: $mobile_only!default;
+
 /* ----------------------------------------------------------
   Col2
 ---------------------------------------------------------- */
@@ -39,7 +41,7 @@
     }
 }
 
-@media($mobile_only) {
+@media($integento_col2set_breakpoint) {
     .col2-set--base {
         margin: 0;
     }

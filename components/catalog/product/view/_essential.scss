@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_catalog_product_view_essential_breakpoint: $mobile_only!default;
+
 /* ----------------------------------------------------------
   Essential grid
 ---------------------------------------------------------- */
@@ -20,7 +22,7 @@
     width: 45%;
 }
 
-@media($mobile_only) {
+@media($integento_catalog_product_view_essential_breakpoint) {
     .product-essential,
     .product-essential .product-img-box,
     .product-essential .product-shop {
