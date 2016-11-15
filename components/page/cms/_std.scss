@@ -5,7 +5,7 @@
 ---------------------------------------------------------- */
 
 .std {
-    font-size: 13px;
+    font-size: $font-size;
     -webkit-hyphens: auto;
     -moz-hyphens: auto;
     hyphens: auto;
@@ -18,7 +18,7 @@
 .std p,
 .std li {
     font-size: 1em;
-    line-height: 1.4;
+    line-height: $line-height;
 }
 
 .std table,

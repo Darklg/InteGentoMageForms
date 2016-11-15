@@ -36,10 +36,12 @@
 
 /* Prefix */
 
-.form-list .input-box select[name="suffix"],
-.form-list .input-box select[name="prefix"] {
-    width: auto;
-    min-width: 2em;
+.form-list .input-box {
+    select[name="suffix"],
+    select[name="prefix"] {
+        width: auto;
+        min-width: 2em;
+    }
 }
 
 /* Dob */

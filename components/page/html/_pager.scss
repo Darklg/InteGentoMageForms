@@ -11,8 +11,8 @@
 .pager * {
     display: inline-block;
     margin-bottom: 0;
-    font-size: 13px;
-    line-height: 20px;
+    font-size: $font-size;
+    line-height: $line-height;
     vertical-align: 0;
 }
 
@@ -26,9 +26,9 @@
 
 .pager ol li.current,
 .pager ol a {
-    width: 20px;
-    height: 20px;
+    width: $line-height-em;
+    height: $line-height-em;
     text-align: center;
-    line-height: 20px;
+    line-height: $line-height;
     outline: 1px solid #f0f0f0;
 }

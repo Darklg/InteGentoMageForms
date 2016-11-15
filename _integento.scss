@@ -3,7 +3,7 @@
 /**
  * InteGento Styles : Default CSS for Magento
  *
- * @version 0.18.2
+ * @version 0.18.3
  * @license MIT
  * @author Darklg <darklg.blog@gmail.com> <@darklg>
  * @url http://github.com/Darklg/InteGento
@@ -11,6 +11,8 @@
  */
 
 $font-size: 13px !default;
+$line-height: 1.4 !default;
+$line-height-em: 1.4em !default;
 $mobile-max: 767px !default;
 $tablet-min: 768px !default;
 $tablet-max: 1023px !default;
