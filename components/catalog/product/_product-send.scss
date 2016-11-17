@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.sendfriend-product-send {
+    .main-container__wrapper {
+        @extend .centered-container;
+    }
+
+    .main-container__wrapper .main-container {
+        max-width: $mobile-max;
+    }
+}
+
+/* ----------------------------------------------------------
+  Form
+---------------------------------------------------------- */
+
+#product_sendtofriend_form {
+    margin-top: 2em;
+}
+
+#add_recipient_button {
+    margin-top: 1em;
+}
