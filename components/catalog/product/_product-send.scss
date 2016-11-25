@@ -6,7 +6,7 @@
 
 .sendfriend-product-send {
     .main-container__wrapper {
-        @extend .centered-container;
+        @extend .centered-container !optional;
     }
 
     .main-container__wrapper .main-container {

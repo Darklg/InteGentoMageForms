@@ -12,7 +12,7 @@
     }
 
     label {
-        @extend .no-display !optional;
+        @extend .hidden !optional;
     }
 
     button,

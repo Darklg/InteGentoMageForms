@@ -19,7 +19,7 @@
 .customer-address-form,
 .customer-address-index {
     .col-main .back-link {
-        @extend .no-display !optional;
+        @extend .hidden !optional;
     }
 }
 
@@ -30,7 +30,7 @@
 .dashboard .box-info {
     .col2-set + .col2-set .box-content,
     .box-head + .col2-set {
-        @extend .desktop-grid-table;
+        @extend .desktop-grid-table !optional;
         margin-bottom: $desktop-padding;
     }
 }
@@ -40,7 +40,7 @@
 ---------------------------------------------------------- */
 
 .addresses-primary ol {
-    @extend .desktop-grid-table;
+    @extend .desktop-grid-table !optional;
     margin-bottom: $desktop-padding;
 }
 
@@ -71,6 +71,6 @@
 ---------------------------------------------------------- */
 
 .order-info-box {
-    @extend .desktop-grid-table;
+    @extend .desktop-grid-table !optional;
     margin-bottom: $desktop-padding;
 }
