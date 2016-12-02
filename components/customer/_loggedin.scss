@@ -35,6 +35,36 @@
     }
 }
 
+.box-info .box-title,
+.box-recent .box-head {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    a {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+@media($mobile_only) {
+    .box-info .box-title,
+    .box-recent .box-head {
+        margin-bottom: 0.5em;
+    }
+
+    .box-info .box-title a,
+    .box-recent .box-head a {
+        display: block;
+        z-index: 1;
+        position: relative;
+        top: -0.5em;
+    }
+}
+
 /* ----------------------------------------------------------
   Addresses
 ---------------------------------------------------------- */
@@ -50,8 +80,28 @@
 
 .addresses-additional ol > li {
     float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
     width: 33.3%;
+    padding-right: 2em;
 }
+
+/* Item address
+-------------------------- */
+
+.item--address {
+    & {
+        padding-bottom: 1em;
+    }
+
+    a[class*="button"] {
+        margin-top: 0.5em;
+        min-width: 130px;
+    }
+}
+
+/* Responsive
+-------------------------- */
 
 @media($desktop_excluded) {
     .addresses-additional ol > li {
@@ -73,4 +123,38 @@
 .order-info-box {
     @extend .desktop-grid-table !optional;
     margin-bottom: $desktop-padding;
+}
+
+/* ----------------------------------------------------------
+  Wishlist
+---------------------------------------------------------- */
+
+/* Enlarge table + Hide "add all" if only one item */
+
+#wishlist-view-form {
+    & {
+        max-width: 100%;
+    }
+
+    &[data-items-nb="1"] .btn-add {
+        display: none!important;
+    }
+}
+
+/* Buttons
+-------------------------- */
+
+#wishlist-view-form .buttons-set2 {
+    & {
+        @extend .buttons-set--double;
+    }
+
+    button {
+        margin-bottom: 1em;
+    }
+
+    button[name="save_and_share"],
+    button[name="do"] {
+        display: none;
+    }
 }
