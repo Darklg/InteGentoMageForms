@@ -12,12 +12,15 @@
   Reset
 ---------------------------------------------------------- */
 
-.newsletter-manage-index,
-.wishlist-index-index,
-.sales-order-view,
+.aw-hdu3-customer-index,
+.awrma-customer-rma-list,
 .customer-account-edit,
 .customer-address-form,
-.customer-address-index {
+.customer-address-index,
+.newsletter-manage-index,
+.sales-order-history,
+.sales-order-view,
+.wishlist-index-index {
     .col-main .back-link {
         @extend .hidden !optional;
     }
@@ -47,6 +50,10 @@
         position: absolute;
         top: 0;
         right: 0;
+        bottom: 0;
+        height: 1em;
+        margin: auto;
+        line-height: 1;
     }
 }
 
@@ -62,6 +69,7 @@
         z-index: 1;
         position: relative;
         top: -0.5em;
+        bottom: auto;
     }
 }
 
