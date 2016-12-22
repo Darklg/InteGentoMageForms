@@ -16,44 +16,54 @@ p.required {
 -------------------------- */
 
 .messages {
-    display: block;
-    margin-bottom: 30px;
-}
+    & {
+        display: block;
+        margin-bottom: 30px;
+    }
 
-.messages li li {
-    margin-bottom: 5px;
-    padding: 7px;
-    border: 1px solid #ccc;
-    -webkit-border-radius: 2px;
-    -moz-border-radius: 2px;
-    border-radius: 2px;
-    list-style-type: none;
-    color: #333;
-    background: #fff;
-    -webkit-background-clip: padding-box;
-}
+    ul,
+    li {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        font-size: inherit;
+        list-style-type: none;
+        -webkit-background-clip: padding-box;
+    }
 
-.messages .success-msg li {
-    border-color: #6C6;
-    color: #080;
-    background-color: #EFE;
-}
+    li li + li {
+        margin-top: 0.5em;
+    }
 
-.messages .error-msg li {
-    border-color: #C66;
-    color: #800;
-    background-color: #FEE;
-}
+    li li {
+        padding: 0.5em;
+        border: 1px solid;
+        border-radius: 2px;
+        color: #333;
+        background: #fff;
+    }
 
-.messages .note-msg li,
-.messages .notice-msg li {
-    border-color: #66C;
-    color: #008;
-    background-color: #EEF;
-}
+    .success-msg li {
+        border-color: #6C6;
+        color: #080;
+        background-color: #EFE;
+    }
 
-.messages .warning-msg li {
-    border-color: #CC6;
-    color: #880;
-    background-color: #FFE;
+    .error-msg li {
+        border-color: #C66;
+        color: #800;
+        background-color: #FEE;
+    }
+
+    .note-msg li,
+    .notice-msg li {
+        border-color: #66C;
+        color: #008;
+        background-color: #EEF;
+    }
+
+    .warning-msg li {
+        border-color: #CC6;
+        color: #880;
+        background-color: #FFE;
+    }
 }
