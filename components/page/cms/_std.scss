@@ -15,23 +15,23 @@
 /* Text
 -------------------------- */
 
-.std p,
-.std li {
-    font-size: 1em;
-    line-height: $line-height;
+blockquote,
+p,
+li {
+    .std & {
+        font-size: 1em;
+        line-height: $line-height;
+    }
 }
 
-.std table,
-.std p,
-.std ol,
-.std ul {
-    margin: 0 0 1em;
-}
-
-.std p:last-child,
-.std ol:last-child,
-.std ul:last-child {
-    margin-bottom: 0;
+table,
+p,
+blockquote,
+ol,
+ul {
+    .std &:not(:last-child) {
+        margin: 0 0 1em;
+    }
 }
 
 /* Table
