@@ -1,10 +1,28 @@
 @charset "UTF-8";
 
 $integento_layouts_breakpoint: $mobile_only!default;
+$integento_layouts_maxwidth: $content_width_wide!default;
 
 /* ----------------------------------------------------------
   Layouts
 ---------------------------------------------------------- */
+
+/* Common
+-------------------------- */
+
+.col3-layout .col-main,
+.col3-layout .col-wrapper,
+.col3-layout .col-left,
+.col3-layout .col-right,
+.col2-left-layout--natural .col-main,
+.col2-left-layout--natural .col-left,
+.col2-left-layout .col-main,
+.col2-left-layout .col-left,
+.col2-right-layout .col-main,
+.col2-right-layout .col-right {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
 
 /* 2 col Right
 -------------------------- */
@@ -16,8 +34,13 @@ $integento_layouts_breakpoint: $mobile_only!default;
         width: 70%;
     }
 
+    .col-main {
+        padding-left: $desktop-padding;
+    }
+
     .col-right {
         width: 30%;
+        padding-right: $desktop-padding;
     }
 }
 
@@ -31,8 +54,13 @@ $integento_layouts_breakpoint: $mobile_only!default;
         width: 70%;
     }
 
+    .col-main {
+        padding-right: $desktop-padding;
+    }
+
     .col-left {
         width: 30%;
+        padding-left: $desktop-padding;
     }
 }
 
@@ -43,6 +71,14 @@ $integento_layouts_breakpoint: $mobile_only!default;
     .col-main,
     .col-left {
         float: left;
+    }
+
+    .col-main {
+        padding-left: $desktop-padding;
+    }
+
+    .col-left {
+        padding-right: $desktop-padding;
     }
 }
 
@@ -77,10 +113,25 @@ $integento_layouts_breakpoint: $mobile_only!default;
     }
 }
 
+/* Size
+-------------------------- */
+
+.col1-layout .col-main,
+.col3-layout,
+.col2-left-layout--natural,
+.col2-left-layout,
+.col2-right-layout {
+    @extend %responsive-padding-lr!optional;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $integento_layouts_maxwidth;
+}
+
 /* Clear
 -------------------------- */
 
 .col3-layout:after,
+.col2-left-layout--natural:after,
 .col2-left-layout:after,
 .col2-right-layout:after {
     content: '';
@@ -99,11 +150,15 @@ $integento_layouts_breakpoint: $mobile_only!default;
     .col3-layout .col-wrapper,
     .col3-layout .col-left,
     .col3-layout .col-right,
+    .col2-left-layout--natural .col-main,
+    .col2-left-layout--natural .col-left,
     .col2-left-layout .col-main,
     .col2-left-layout .col-left,
     .col2-right-layout .col-main,
     .col2-right-layout .col-right {
         float: none!important;
         width: auto!important;
+        padding-right: 0;
+        padding-left: 0;
     }
 }

@@ -1,10 +1,16 @@
 @charset "UTF-8";
 
+$integento_breadcrumbs_maxwidth: $content_width_wide!default;
+
 /* ----------------------------------------------------------
   Breadcrumbs
 ---------------------------------------------------------- */
 
 .breadcrumbs {
+    @extend %responsive-padding-lr!optional;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: $integento_breadcrumbs_maxwidth;
     min-height: 30px;
 }
 
@@ -16,4 +22,10 @@
 .breadcrumbs li + li:before {
     content: '/';
     margin: 0 5px;
+}
+
+.breadcrumbs:after {
+    content: '';
+    display: table;
+    clear: both;
 }
