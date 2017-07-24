@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+$integento_messages_maxwidth: $content_width_wide!default;
+
 /* ----------------------------------------------------------
   Messages
 ---------------------------------------------------------- */
@@ -19,6 +21,13 @@ p.required {
     & {
         display: block;
         margin-bottom: 30px;
+    }
+
+    #wrapper > & {
+        @extend %responsive-padding-lr!optional;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: $integento_messages_maxwidth;
     }
 
     ul,
