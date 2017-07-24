@@ -26,8 +26,8 @@
         vertical-align: top;
     }
 
-    th:last-child,
-    td:last-child {
+    th + th:last-child,
+    td + td:last-child {
         text-align: right;
     }
 
