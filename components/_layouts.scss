@@ -71,6 +71,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     .col-main,
     .col-left {
         float: left;
+        width: 70%;
     }
 
     .col-main {
@@ -78,6 +79,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     }
 
     .col-left {
+        width: 30%;
         padding-right: $desktop-padding;
     }
 }
