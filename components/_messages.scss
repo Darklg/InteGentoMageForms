@@ -75,4 +75,21 @@ p.required {
         color: #880;
         background-color: #FFE;
     }
+
+    li a,
+    li a[class*="button"]:hover,
+    li a[class*="button"]:focus,
+    li a[class*="button"] {
+        display: inline;
+        margin: 0 0.3em;
+        padding: 0;
+        border: 0;
+        text-decoration: underline;
+        text-transform: none;
+        font: inherit;
+        vertical-align: inherit;
+        color: inherit!important;
+        background: transparent!important;
+        box-shadow: 0 0 0 1px transparent !important;
+    }
 }
