@@ -7,11 +7,23 @@ $integento_breadcrumbs_maxwidth: $content_width_wide!default;
 ---------------------------------------------------------- */
 
 .breadcrumbs {
-    @extend %responsive-padding-lr!optional;
-    margin-right: auto;
-    margin-left: auto;
-    max-width: $integento_breadcrumbs_maxwidth;
-    min-height: 30px;
+    & {
+        @extend %responsive-padding-lr!optional;
+        margin-right: auto;
+        margin-left: auto;
+        max-width: $integento_breadcrumbs_maxwidth;
+        min-height: 30px;
+    }
+
+    [class*="col1-layout"] &,
+    [class*="col2-left-layout"] &,
+    [class*="col2-left-layout--natural"] &,
+    [class*="col2-right-layout"] &,
+    [class*="col3-layout"] &,
+    [class*="centered-container"] &{
+        padding-right: 0!important;
+        padding-left: 0!important;
+    }
 }
 
 .breadcrumbs li {
