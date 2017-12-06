@@ -160,6 +160,8 @@ $integento_formlist_breakpoint: $mobile_only!default;
 /* Messages
 -------------------------- */
 
+%form-validation-advice,
+.validation-error + .validation-advice,
 .input-box .validation-advice {
     display: block;
     margin-top: 0.3em;
