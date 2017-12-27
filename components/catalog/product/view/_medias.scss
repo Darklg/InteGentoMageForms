@@ -65,12 +65,26 @@ $integento_catalog_product_view_media_breakpoint: $mobile_only!default;
 }
 
 @media($integento_catalog_product_view_media_breakpoint) {
+    .product-medias {
+        padding-bottom: 50px;
+        padding-left: 0;
+        white-space: nowrap;
+    }
+
     .product-medias .more-views {
         top: auto;
-        right: 10px;
-        bottom: 10px;
-        left: 10px;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow-y: hidden;
+        overflow-x: scroll;
         text-align: center;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .product-medias .more-views img {
+        width: 40px;
     }
 
     .product-medias .more-views > li {
