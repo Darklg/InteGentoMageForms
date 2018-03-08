@@ -4,22 +4,25 @@
   Price box
 ---------------------------------------------------------- */
 
-.price-box,
-.price-box * {
-    font-size: inherit;
-}
+.price-box {
+    &,
+    * {
+        font-size: inherit;
+    }
 
-.price-box p {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-}
+    p:not(:last-child),
+    p {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+    }
 
-.price-box .minimal-price-link .label,
-.price-box .price-label {
-    display: none;
-}
+    .minimal-price-link .label,
+    .price-label {
+        display: none;
+    }
 
-.price-box .old-price {
-    text-decoration: line-through;
+    .old-price {
+        text-decoration: line-through;
+    }
 }
