@@ -5,12 +5,12 @@
 ---------------------------------------------------------- */
 
 .products-grid {
+    display: flex;
     z-index: 1;
     position: relative;
-    overflow: hidden;
-    display: flex;
     flex-wrap: wrap;
     justify-content: left;
+    overflow: hidden;
 }
 
 .products-grid > * {
@@ -103,5 +103,39 @@
 
     .products-grid--line >:nth-child(2) {
         display: none;
+    }
+}
+
+/* Slider
+-------------------------- */
+
+.products-grid--slideme {
+    &:not(.slick-initialized) {
+        z-index: 1;
+        position: relative;
+        margin: 0 -10px;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    & > div:not(.slick-list) {
+        display: inline-block;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 10px;
+        vertical-align: top;
+    }
+
+    .product-item {
+        white-space: normal;
+    }
+
+    .slick-track,
+    .slick-list {
+        min-width: 100%;
+    }
+
+    .slick-slide {
+        margin: 0 10px;
     }
 }
