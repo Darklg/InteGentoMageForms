@@ -5,15 +5,23 @@
 ---------------------------------------------------------- */
 
 dl.item-options {
-    overflow: hidden;
-    text-align: left;
-}
+    & {
+        overflow: hidden;
+        text-align: left;
+    }
 
-dl.item-options dt {
-    float: left;
-}
+    &,
+    & dd,
+    & dl {
+        font: inherit;
+    }
 
-dl.item-options dt:after {
-    content: ':';
-    margin: 0 3px;
+    & dt {
+        float: left;
+    }
+
+    & dt:after {
+        content: ':';
+        margin: 0 0.3em;
+    }
 }
