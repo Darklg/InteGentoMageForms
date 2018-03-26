@@ -2,6 +2,8 @@
 
 $integento_layouts_breakpoint: $mobile_only!default;
 $integento_layouts_maxwidth: $content_width_wide!default;
+$integento_layouts_colmain_width: 70%!default;
+$integento_layouts_colside_width: 30%!default;
 
 /* ----------------------------------------------------------
   Layouts
@@ -14,6 +16,8 @@ $integento_layouts_maxwidth: $content_width_wide!default;
 .col3-layout .col-wrapper,
 .col3-layout .col-left,
 .col3-layout .col-right,
+.col2-left-layout--inverted .col-main,
+.col2-left-layout--inverted .col-left,
 .col2-left-layout--natural .col-main,
 .col2-left-layout--natural .col-left,
 .col2-left-layout .col-main,
@@ -24,14 +28,15 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     box-sizing: border-box;
 }
 
-/* 2 col Right
+/* 2 col Right & 2 col left - natural
 -------------------------- */
 
+.col2-left-layout--natural,
 .col2-right-layout {
     .col-main,
     .col-right {
         float: left;
-        width: 70%;
+        width: $integento_layouts_colmain_width;
     }
 
     .col-main {
@@ -39,7 +44,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     }
 
     .col-right {
-        width: 30%;
+        width: $integento_layouts_colside_width;
         padding-right: $desktop-padding;
     }
 }
@@ -51,7 +56,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     .col-main,
     .col-left {
         float: right;
-        width: 70%;
+        width: $integento_layouts_colmain_width;
     }
 
     .col-main {
@@ -59,19 +64,19 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     }
 
     .col-left {
-        width: 30%;
+        width: $integento_layouts_colside_width;
         padding-left: $desktop-padding;
     }
 }
 
-/* 2 col left - natural
+/* 2 col left - inverted
 -------------------------- */
 
-.col2-left-layout--natural {
+.col2-left-layout--inverted {
     .col-main,
     .col-left {
-        float: left;
-        width: 70%;
+        float: right;
+        width: $integento_layouts_colmain_width;
     }
 
     .col-main {
@@ -79,10 +84,11 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     }
 
     .col-left {
-        width: 30%;
+        width: $integento_layouts_colside_width;
         padding-right: $desktop-padding;
     }
 }
+
 
 /* 3 col
 -------------------------- */
@@ -120,6 +126,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
 
 .col1-layout .col-main,
 .col3-layout,
+.col2-left-layout--inverted,
 .col2-left-layout--natural,
 .col2-left-layout,
 .col2-right-layout {
@@ -133,6 +140,7 @@ $integento_layouts_maxwidth: $content_width_wide!default;
 -------------------------- */
 
 .col3-layout:after,
+.col2-left-layout--inverted:after,
 .col2-left-layout--natural:after,
 .col2-left-layout:after,
 .col2-right-layout:after {
@@ -152,6 +160,8 @@ $integento_layouts_maxwidth: $content_width_wide!default;
     .col3-layout .col-wrapper,
     .col3-layout .col-left,
     .col3-layout .col-right,
+    .col2-left-layout--inverted .col-main,
+    .col2-left-layout--inverted .col-left,
     .col2-left-layout--natural .col-main,
     .col2-left-layout--natural .col-left,
     .col2-left-layout .col-main,
