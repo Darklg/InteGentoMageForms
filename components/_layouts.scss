@@ -34,6 +34,7 @@ $integento_layouts_colside_width: 30%!default;
 .col2-left-layout--natural,
 .col2-right-layout {
     .col-main,
+    .col-left,
     .col-right {
         float: left;
         width: $integento_layouts_colmain_width;
@@ -43,6 +44,7 @@ $integento_layouts_colside_width: 30%!default;
         padding-left: $desktop-padding;
     }
 
+    .col-left,
     .col-right {
         width: $integento_layouts_colside_width;
         padding-right: $desktop-padding;
@@ -88,7 +90,6 @@ $integento_layouts_colside_width: 30%!default;
         padding-right: $desktop-padding;
     }
 }
-
 
 /* 3 col
 -------------------------- */
