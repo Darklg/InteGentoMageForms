@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 $integento_col2set_breakpoint: $mobile_only!default;
+$desktop-padding: 40px!default;
+$desktop-padding-half:$desktop-padding/2!default;
+$desktop-padding-neg: -40px!default;
+$desktop-padding-neg-half:$desktop-padding-neg/2!default;
 
 /* ----------------------------------------------------------
   Col2
@@ -10,12 +14,12 @@ $integento_col2set_breakpoint: $mobile_only!default;
     & {
         z-index: 1;
         position: relative;
-        margin: 0 -10px 20px;
+        margin: 0 $desktop-padding-neg-half $desktop-padding-half;
         overflow: hidden;
     }
 
     & > :not(.col-1):not(.col-2) {
-        padding: 0 10px;
+        padding: 0 $desktop-padding-half;
     }
 
     .col-1,
@@ -24,7 +28,7 @@ $integento_col2set_breakpoint: $mobile_only!default;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         width: 50%;
-        padding: 0 10px;
+        padding: 0 $desktop-padding-half;
     }
 
     & * .col-1,
@@ -33,11 +37,11 @@ $integento_col2set_breakpoint: $mobile_only!default;
     }
 
     & * .col-1 {
-        padding-right: 10px;
+        padding-right: $desktop-padding-half;
     }
 
     & * .col-2 {
-        padding-left: 10px;
+        padding-left: $desktop-padding-half;
     }
 }
 
@@ -56,7 +60,7 @@ $integento_col2set_breakpoint: $mobile_only!default;
     .col2-set--base .col-2 {
         float: none;
         width: auto;
-        margin-bottom: 20px;
+        margin-bottom: $desktop-padding-half;
         padding: 0;
     }
 }
