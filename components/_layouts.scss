@@ -41,13 +41,13 @@ $integento_layouts_colside_width: 30%!default;
     }
 
     .col-main {
-        padding-left: $desktop-padding;
+        padding-left: $desktop-padding/2;
     }
 
     .col-left,
     .col-right {
         width: $integento_layouts_colside_width;
-        padding-right: $desktop-padding;
+        padding-right: $desktop-padding/2;
     }
 }
 
@@ -62,12 +62,12 @@ $integento_layouts_colside_width: 30%!default;
     }
 
     .col-main {
-        padding-right: $desktop-padding;
+        padding-right: $desktop-padding/2;
     }
 
     .col-left {
         width: $integento_layouts_colside_width;
-        padding-left: $desktop-padding;
+        padding-left: $desktop-padding/2;
     }
 }
 
@@ -82,12 +82,12 @@ $integento_layouts_colside_width: 30%!default;
     }
 
     .col-main {
-        padding-left: $desktop-padding;
+        padding-left: $desktop-padding/2;
     }
 
     .col-left {
         width: $integento_layouts_colside_width;
-        padding-right: $desktop-padding;
+        padding-right: $desktop-padding/2;
     }
 }
 
