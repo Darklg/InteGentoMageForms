@@ -74,8 +74,42 @@
 }
 
 /* ----------------------------------------------------------
+  Edit
+---------------------------------------------------------- */
+
+$fieldset-margin: 2em!default;
+.customer-address-form,
+.customer-account-edit {
+    .fieldset + .fieldset {
+        margin-top: $fieldset-margin;
+    }
+}
+
+/* ----------------------------------------------------------
   Addresses
 ---------------------------------------------------------- */
+
+%integento-item-address {
+    h3 {
+        text-transform: uppercase;
+    }
+
+    p {
+        display: block;
+        margin-top: 0.5em;
+    }
+
+    a {
+        text-decoration: underline;
+    }
+}
+
+.addresses-additional,
+.addresses-primary {
+    .item {
+        @extend %integento-item-address;
+    }
+}
 
 .addresses-primary ol {
     @extend .desktop-grid-table !optional;
