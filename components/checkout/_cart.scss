@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Empty cart
+---------------------------------------------------------- */
+
+.cart-empty {
+    & {
+        @extend %responsive-margin-bottom !optional;
+        text-align: center;
+    }
+
+    a {
+        border-bottom: 1px solid;
+    }
+}

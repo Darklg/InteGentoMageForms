@@ -10,3 +10,22 @@
         min-width: 0;
     }
 }
+
+/* ----------------------------------------------------------
+  Success
+---------------------------------------------------------- */
+
+.checkout-onepage-success .col-main {
+    & {
+        @extend %responsive-margin-bottom;
+        text-align: center;
+    }
+
+    & > div {
+        text-align: left;
+    }
+
+    .buttons-set {
+        text-align: center;
+    }
+}
