@@ -184,6 +184,16 @@ $fieldset-margin: 2em!default;
     }
 }
 
+/* Table
+-------------------------- */
+
+#wishlist-table {
+    th,
+    td {
+        vertical-align: top;
+    }
+}
+
 /* Buttons
 -------------------------- */
 
